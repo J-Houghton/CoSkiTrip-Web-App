@@ -109,6 +109,32 @@ class Incident {
         result += `_Updated by CDOT: ${lastUpdated}_\n\n`
         return result;
     }
+    
+    getLaneImpactDetails() {
+        let laneImpactDetails = [];
+        for (let impact of this.properties.laneImpacts) {
+          let direction = impact.direction;
+          let closedLanes = impact.closedLaneTypes.join(', ') || 'None';
+          laneImpactDetails.push({
+            direction: direction,
+            laneCount: impact.laneCount,
+            closedLanes: closedLanes,
+          });
+        }
+        return laneImpactDetails;
+      }
+    
+      getFormattedSchedule() {
+        if (this.properties.schedule) {
+          return {
+            startTime: new Date(this.properties.schedule.startTime).toLocaleString('en-US', { timeZone: 'America/Denver' }),
+            endTime: new Date(this.properties.schedule.endTime).toLocaleString('en-US', { timeZone: 'America/Denver' }),
+            daysOfWeek: this.properties.schedule.daysOfWeek.join(', '),
+            type: this.properties.schedule.type,
+          };
+        }
+        return null;
+      }
 }
 
 class Detour {
