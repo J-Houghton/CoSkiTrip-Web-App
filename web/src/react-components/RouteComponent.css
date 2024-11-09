@@ -1,0 +1,44 @@
+/* src/components/RouteComponent.css */
+.route-container {
+  border: 1px solid #A3DAFF; /* Icy Blue */
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #FFFFFF; /* Pure White */
+  box-shadow: 0 4px 10px rgba(0, 119, 182, 0.15); /* Shadow with Deep Winter Blue tint */
+}
+
+.route-header {
+  background-color: #87CEEB; /* Muted Sky Blue */
+  color: #FFFFFF; /* White */
+  padding: 10px 15px;
+  border-radius: 8px 8px 0 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.route-content {
+  padding: 15px;
+}
+
+.global-incidents {
+  margin-top: 20px;
+}
+
+.alert-message {
+  color: #FFB703; /* Warm Sunrise Orange */
+  font-weight: bold;
+}
+
+.incident-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.no-incidents {
+  margin-left: 20px;
+  font-style: italic;
+  color: #777;
+}

@@ -1,0 +1,108 @@
+/* src/components/SubrouteAccordion.css */
+ 
+  /* .subroute-accordion summary {
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #eee;
+    user-select: none;
+  }
+  
+  .subroute-accordion[open] summary {
+    background-color: #ddd;
+  }
+  
+  .subroute-accordion summary::-webkit-details-marker {
+    display: none;
+  } */
+
+  .subroute-accordion { 
+    overflow: hidden;
+    background-color: #A3DAFF;
+  }
+   
+  
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  details summary {
+    width: 100%;
+    padding: 0.5rem 0;
+    /*border-top: 1px solid black;*/
+    background-color: #A3DAFF; /* Icy Blue */
+    border-top: 3px solid #FFC300; /* Golden Yellow */
+    color: #2A5934; /* Deep Forest Green */
+    position: relative;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 300;
+    list-style: none;
+  }
+  
+  details summary:after {
+    content: "+";
+    color: #0077B6; /* Deep Winter Blue */
+    position: absolute;
+    font-size: 1.75rem;
+    line-height: 0;
+    margin-top: 0.75rem;
+    right: 0;
+    font-weight: 200;
+    transform-origin: center;
+    transition: 200ms linear;
+  }
+  details[open] summary:after {
+    transform: rotate(45deg);
+    font-size: 2rem;
+  }
+  details summary {
+    outline: 0;
+  }
+  details p {
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+    padding-top: 1rem;
+  color: #556D75; /* Stormy Gray */
+  }
+
+
+  .destinations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+   background-color: #D9EEF2; /* Pure White */
+  }
+  
+  .destinations-table th,
+  .destinations-table td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .destinations-table th {
+  background-color: #0077B6; /* Deep Winter Blue */
+  color: #FFFFFF; /* Pure White */
+  }
+  
+  .destinations-table tr:nth-child(even) {
+  background-color: #D9EEF2; /* Subtle Mint Green */
+  }
+  
+  .destinations-table td {
+  border-bottom: 1px solid #DDD;
+  }
+  
+  .incident-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .no-incidents-reported {
+    margin-left: 20px;
+    font-style: italic;
+  color: #777; /* Neutral Gray */
+  }

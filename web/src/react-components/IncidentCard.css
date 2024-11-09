@@ -1,0 +1,65 @@
+/* src/components/IncidentCard.css */
+
+.incident-card {
+  background-color: #FFFFFF; /* Pure White */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px;
+  flex: 1 1 calc(33.333% - 30px);
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.incident-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.incident-card h4 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  color: #0077B6; /* Deep Winter Blue */
+}
+
+.incident-card .severity-icon {
+  margin-right: 8px;
+  color: #FFB703; /* Warm Sunrise Orange */
+}
+
+.incident-card.minor .severity-icon {
+  color: #FFC300; /* Golden Yellow */
+}
+
+.incident-card.major .severity-icon {
+  color: #FFB703; /* Warm Sunrise Orange */
+}
+
+.incident-card.severe .severity-icon {
+  color: #B71C1C; /* Dark Red */
+}
+
+.incident-message {
+  font-size: 1em;
+  margin: 10px 0;
+  color: #556D75; /* Stormy Gray */
+}
+
+.last-updated {
+  font-size: 0.9em;
+  color: #777; /* Neutral Gray */
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+  .incident-card {
+    flex: 1 1 calc(50% - 30px);
+  }
+}
+
+@media (max-width: 500px) {
+  .incident-card {
+    flex: 1 1 100%;
+  }
+}
