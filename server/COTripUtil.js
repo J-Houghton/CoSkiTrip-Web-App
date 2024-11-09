@@ -3,7 +3,7 @@ export class COTripUtil {
         this.incidents = []
         this.destinations = []
         this.unstableScrapedData = []
-        this.apiKey = 'J1N250P-06V49HP-H2JQ5XB-2550GGS'//process.env.COTRIP_API_KEY
+        this.apiKey = //process.env.COTRIP_API_KEY
         this.baseUrl = "https://data.cotrip.org/api/v1"
 
         if(this.apiKey === undefined || this.apiKey === null){
